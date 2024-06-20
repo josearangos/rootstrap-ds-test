@@ -1,6 +1,8 @@
 # Rootstrap-ds-test
 
-# Data Scientist Challenge
+# Github solution => https://github.com/josearangos/rootstrap-ds-test/tree/main
+
+[github](https://github.com/josearangos/rootstrap-ds-test/tree/main)
 
 ## Description of the problem
 
