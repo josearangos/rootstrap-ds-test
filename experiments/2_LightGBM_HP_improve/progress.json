@@ -1,0 +1,976 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 3600,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "not_so_random",
+            "hill_climbing_1",
+            "hill_climbing_2",
+            "hill_climbing_3"
+        ],
+        "algorithms": [
+            "LightGBM"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 0.014159679412841797
+            },
+            {
+                "model_name": "1_Default_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "default_algorithms",
+                "train_time": 29.303069829940796
+            },
+            {
+                "model_name": "2_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "not_so_random",
+                "train_time": 8.597157001495361
+            },
+            {
+                "model_name": "3_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "not_so_random",
+                "train_time": 18.386861085891724
+            },
+            {
+                "model_name": "4_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "not_so_random",
+                "train_time": 27.55712103843689
+            },
+            {
+                "model_name": "5_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "not_so_random",
+                "train_time": 32.4350368976593
+            },
+            {
+                "model_name": "6_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "hill_climbing_1",
+                "train_time": 24.194293975830078
+            },
+            {
+                "model_name": "7_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "hill_climbing_1",
+                "train_time": 1410.178461074829
+            },
+            {
+                "model_name": "8_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "hill_climbing_1",
+                "train_time": 24.552126169204712
+            },
+            {
+                "model_name": "9_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "hill_climbing_2",
+                "train_time": 13.804612159729004
+            },
+            {
+                "model_name": "10_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "hill_climbing_2",
+                "train_time": 27.088819980621338
+            },
+            {
+                "model_name": "11_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "hill_climbing_2",
+                "train_time": 15.630086898803711
+            },
+            {
+                "model_name": "12_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "hill_climbing_2",
+                "train_time": 25.752262830734253
+            },
+            {
+                "model_name": "13_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "hill_climbing_2",
+                "train_time": 15.271224021911621
+            },
+            {
+                "model_name": "14_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "hill_climbing_2",
+                "train_time": 23.843645811080933
+            },
+            {
+                "model_name": "15_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "hill_climbing_3",
+                "train_time": 22.11180281639099
+            },
+            {
+                "model_name": "16_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "hill_climbing_3",
+                "train_time": 22.777491092681885
+            },
+            {
+                "model_name": "17_LightGBM",
+                "model_type": "LightGBM",
+                "fit_level": "hill_climbing_3",
+                "train_time": 26.716366052627563
+            }
+        ],
+        "is_hill_climbing": true,
+        "is_stacking": false
+    },
+    "all_params": {
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary",
+                    "num_leaves": 63,
+                    "learning_rate": 0.05,
+                    "feature_fraction": 0.9,
+                    "bagging_fraction": 0.9,
+                    "min_data_in_leaf": 10,
+                    "seed": 1,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "1_Default_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8583271650629164,
+                "train_time": 30.185057878494263,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            }
+        ],
+        "not_so_random": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1235,
+                    "objective": "binary",
+                    "num_leaves": 15,
+                    "learning_rate": 0.05,
+                    "feature_fraction": 0.8,
+                    "bagging_fraction": 0.5,
+                    "min_data_in_leaf": 50,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "2_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8333333333333334,
+                "train_time": 9.347525596618652,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "objective": "binary",
+                    "num_leaves": 63,
+                    "learning_rate": 0.2,
+                    "feature_fraction": 0.5,
+                    "bagging_fraction": 1.0,
+                    "min_data_in_leaf": 10,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "3_LightGBM",
+                "status": "trained",
+                "final_loss": -0.866153390583358,
+                "train_time": 19.136025190353394,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1237,
+                    "objective": "binary",
+                    "num_leaves": 63,
+                    "learning_rate": 0.05,
+                    "feature_fraction": 0.9,
+                    "bagging_fraction": 1.0,
+                    "min_data_in_leaf": 20,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "4_LightGBM",
+                "status": "trained",
+                "final_loss": -0.85625,
+                "train_time": 28.31950616836548,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1238,
+                    "objective": "binary",
+                    "num_leaves": 95,
+                    "learning_rate": 0.05,
+                    "feature_fraction": 1.0,
+                    "bagging_fraction": 1.0,
+                    "min_data_in_leaf": 10,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "5_LightGBM",
+                "status": "trained",
+                "final_loss": -0.860392967942089,
+                "train_time": 33.19101691246033,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            }
+        ],
+        "hill_climbing_1": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "objective": "binary",
+                    "num_leaves": 63,
+                    "learning_rate": 0.1,
+                    "feature_fraction": 0.5,
+                    "bagging_fraction": 1.0,
+                    "min_data_in_leaf": 10,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "6_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8653559725945785,
+                "train_time": 24.945915937423706,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1238,
+                    "objective": "binary",
+                    "num_leaves": 95,
+                    "learning_rate": 0.1,
+                    "feature_fraction": 1.0,
+                    "bagging_fraction": 1.0,
+                    "min_data_in_leaf": 10,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "7_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8632555356074207,
+                "train_time": 1410.991898059845,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary",
+                    "num_leaves": 63,
+                    "learning_rate": 0.1,
+                    "feature_fraction": 0.9,
+                    "bagging_fraction": 0.9,
+                    "min_data_in_leaf": 10,
+                    "seed": 1,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "8_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8637509266123055,
+                "train_time": 25.338794231414795,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            }
+        ],
+        "hill_climbing_2": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "objective": "binary",
+                    "num_leaves": 31,
+                    "learning_rate": 0.2,
+                    "feature_fraction": 0.5,
+                    "bagging_fraction": 1.0,
+                    "min_data_in_leaf": 10,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "9_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8567627494456763,
+                "train_time": 14.596302270889282,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "objective": "binary",
+                    "num_leaves": 95,
+                    "learning_rate": 0.2,
+                    "feature_fraction": 0.5,
+                    "bagging_fraction": 1.0,
+                    "min_data_in_leaf": 10,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "10_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8632263788259648,
+                "train_time": 27.839022159576416,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "objective": "binary",
+                    "num_leaves": 31,
+                    "learning_rate": 0.1,
+                    "feature_fraction": 0.5,
+                    "bagging_fraction": 1.0,
+                    "min_data_in_leaf": 10,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "11_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8559670781893004,
+                "train_time": 16.385676860809326,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "objective": "binary",
+                    "num_leaves": 95,
+                    "learning_rate": 0.1,
+                    "feature_fraction": 0.5,
+                    "bagging_fraction": 1.0,
+                    "min_data_in_leaf": 10,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "12_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8648488441019562,
+                "train_time": 26.504055738449097,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary",
+                    "num_leaves": 31,
+                    "learning_rate": 0.1,
+                    "feature_fraction": 0.9,
+                    "bagging_fraction": 0.9,
+                    "min_data_in_leaf": 10,
+                    "seed": 1,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "13_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8545589325426242,
+                "train_time": 16.065648078918457,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "objective": "binary",
+                    "num_leaves": 95,
+                    "learning_rate": 0.1,
+                    "feature_fraction": 0.9,
+                    "bagging_fraction": 0.9,
+                    "min_data_in_leaf": 10,
+                    "seed": 1,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "14_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8612750885478159,
+                "train_time": 24.595752716064453,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            }
+        ],
+        "hill_climbing_3": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "objective": "binary",
+                    "num_leaves": 63,
+                    "learning_rate": 0.2,
+                    "feature_fraction": 0.8,
+                    "bagging_fraction": 1.0,
+                    "min_data_in_leaf": 10,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "15_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8633328387001039,
+                "train_time": 22.8742036819458,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "objective": "binary",
+                    "num_leaves": 63,
+                    "learning_rate": 0.1,
+                    "feature_fraction": 0.8,
+                    "bagging_fraction": 1.0,
+                    "min_data_in_leaf": 10,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "16_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8635757665531032,
+                "train_time": 23.56578803062439,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            },
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude"
+                    ],
+                    "ml_task": "binary_classification"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "stratify": true,
+                    "random_seed": 12,
+                    "X_path": "../experiments/2_LightGBM_HP_improve/X.data",
+                    "y_path": "../experiments/2_LightGBM_HP_improve/y.data",
+                    "results_path": "../experiments/2_LightGBM_HP_improve"
+                },
+                "learner": {
+                    "model_type": "LightGBM",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1,
+                    "seed": 1236,
+                    "objective": "binary",
+                    "num_leaves": 95,
+                    "learning_rate": 0.1,
+                    "feature_fraction": 0.8,
+                    "bagging_fraction": 1.0,
+                    "min_data_in_leaf": 10,
+                    "metric": "custom",
+                    "custom_eval_metric_name": "f1",
+                    "explain_level": 1
+                },
+                "automl_random_state": 1234,
+                "ml_task": "binary_classification",
+                "explain_level": 1,
+                "name": "17_LightGBM",
+                "status": "trained",
+                "final_loss": -0.8666371289322109,
+                "train_time": 27.471401929855347,
+                "data_type": "original",
+                "max_time_for_learner": 60
+            }
+        ]
+    },
+    "adjust_validation": false
+}

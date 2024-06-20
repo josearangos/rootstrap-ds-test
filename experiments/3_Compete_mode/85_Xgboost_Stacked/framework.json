@@ -1,0 +1,386 @@
+{
+    "uid": "f97c0410-b5aa-4da2-8569-8eec5d0e906c",
+    "name": "85_Xgboost_Stacked",
+    "preprocessing": [
+        {
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        },
+        {
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "2.0.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "6501bea4-4c9f-423e-a829-1501676f5ca7",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1243,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 7,
+                "min_child_weight": 1,
+                "subsample": 0.9,
+                "colsample_bytree": 0.9,
+                "eval_metric": "f1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_0"
+        },
+        {
+            "library_version": "2.0.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "ac841b57-a902-4f97-b2d2-2946560f252b",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1243,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 7,
+                "min_child_weight": 1,
+                "subsample": 0.9,
+                "colsample_bytree": 0.9,
+                "eval_metric": "f1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_1"
+        },
+        {
+            "library_version": "2.0.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "39fc44e3-3fb1-402d-a368-fe1ee3a38891",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1243,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 7,
+                "min_child_weight": 1,
+                "subsample": 0.9,
+                "colsample_bytree": 0.9,
+                "eval_metric": "f1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_2"
+        },
+        {
+            "library_version": "2.0.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "92df5c74-a605-4a36-84c5-422d3e070ff2",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1243,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 7,
+                "min_child_weight": 1,
+                "subsample": 0.9,
+                "colsample_bytree": 0.9,
+                "eval_metric": "f1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_3"
+        },
+        {
+            "library_version": "2.0.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "7efa48eb-a5d5-433c-b912-4a742700d02b",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1243,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 7,
+                "min_child_weight": 1,
+                "subsample": 0.9,
+                "colsample_bytree": 0.9,
+                "eval_metric": "f1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_4"
+        },
+        {
+            "library_version": "2.0.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "60ef5a3f-ea5d-4b06-b786-84f1909f132c",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1243,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 7,
+                "min_child_weight": 1,
+                "subsample": 0.9,
+                "colsample_bytree": 0.9,
+                "eval_metric": "f1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_5"
+        },
+        {
+            "library_version": "2.0.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "997591dc-5c75-4d43-a1f0-2a64d9ac331c",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1243,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 7,
+                "min_child_weight": 1,
+                "subsample": 0.9,
+                "colsample_bytree": 0.9,
+                "eval_metric": "f1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_6"
+        },
+        {
+            "library_version": "2.0.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "4e320dc0-7403-4e1a-be23-a6423436340b",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1243,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 7,
+                "min_child_weight": 1,
+                "subsample": 0.9,
+                "colsample_bytree": 0.9,
+                "eval_metric": "f1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_7"
+        },
+        {
+            "library_version": "2.0.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "bcfd2673-cdf5-4ea7-b87b-a032372da489",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1243,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 7,
+                "min_child_weight": 1,
+                "subsample": 0.9,
+                "colsample_bytree": 0.9,
+                "eval_metric": "f1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_8"
+        },
+        {
+            "library_version": "2.0.3",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "c2b94be3-5555-48d7-a23b-1e075894fb44",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1243,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 7,
+                "min_child_weight": 1,
+                "subsample": 0.9,
+                "colsample_bytree": 0.9,
+                "eval_metric": "f1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_9"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rounds": 10000,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {},
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "kfold",
+            "k_folds": 10,
+            "shuffle": true,
+            "stratify": true,
+            "random_seed": 12,
+            "X_path": "../experiments/3_Compete_mode/X_stacked.data",
+            "y_path": "../experiments/3_Compete_mode/y.data",
+            "results_path": "../experiments/3_Compete_mode"
+        },
+        "learner": {
+            "model_type": "Xgboost",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1243,
+            "objective": "binary:logistic",
+            "eta": 0.075,
+            "max_depth": 7,
+            "min_child_weight": 1,
+            "subsample": 0.9,
+            "colsample_bytree": 0.9,
+            "eval_metric": "f1",
+            "explain_level": 1
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "85_Xgboost_Stacked",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original_stacked",
+        "max_time_for_learner": 60,
+        "is_stacked": true
+    },
+    "saved": [
+        "85_Xgboost_Stacked/learner_fold_0.xgboost.json",
+        "85_Xgboost_Stacked/learner_fold_1.xgboost.json",
+        "85_Xgboost_Stacked/learner_fold_2.xgboost.json",
+        "85_Xgboost_Stacked/learner_fold_3.xgboost.json",
+        "85_Xgboost_Stacked/learner_fold_4.xgboost.json",
+        "85_Xgboost_Stacked/learner_fold_5.xgboost.json",
+        "85_Xgboost_Stacked/learner_fold_6.xgboost.json",
+        "85_Xgboost_Stacked/learner_fold_7.xgboost.json",
+        "85_Xgboost_Stacked/learner_fold_8.xgboost.json",
+        "85_Xgboost_Stacked/learner_fold_9.xgboost.json"
+    ],
+    "predictions_fname": "85_Xgboost_Stacked/predictions_out_of_folds.csv",
+    "metric_name": "f1",
+    "final_loss": "-0.8768981276721215",
+    "train_time": 26.80801010131836,
+    "is_stacked": true,
+    "joblib_version": "1.4.2",
+    "threshold": 0.49180591106414795
+}

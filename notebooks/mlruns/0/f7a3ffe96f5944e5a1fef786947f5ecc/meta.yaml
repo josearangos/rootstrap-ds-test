@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/josearangos/Documents/Career/rootstrap-ds-test/notebooks/mlruns/0/f7a3ffe96f5944e5a1fef786947f5ecc/artifacts
+end_time: 1718907227584
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f7a3ffe96f5944e5a1fef786947f5ecc
+run_name: wistful-hare-384
+run_uuid: f7a3ffe96f5944e5a1fef786947f5ecc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718907227470
+status: 3
+tags: []
+user_id: josearangos
