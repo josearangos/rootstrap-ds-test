@@ -1,7 +1,9 @@
 # Rootstrap-ds-test
 
+# Github solution => https://github.com/josearangos/rootstrap-ds-test/tree/main
 
 [github](https://github.com/josearangos/rootstrap-ds-test/tree/main)
+# Data Scientist Challenge
 
 ## Description of the problem
 
@@ -56,8 +58,8 @@ Modeling wine quality based on physicochemical tests (see [Cortez et al., 2009],
 2. **Type**: Classification
 3. **Metric to optimize**: F1-Score
 4. **Target**: quality  
-    - bad < 5
-    - good >=5
+    - bad < 5 (0)
+    - good >=5 (1)
 
 ### References
 #### Introductory Paper
@@ -65,43 +67,34 @@ Cortez, P., Cerdeira, A., Almeida, F., Matos, T., & Reis, J. (2009). Modeling wi
 
 
 
+# Setup project
+
+1. conda create --name rootstrap-ds-test python=3.11 
+2. conda activate rootstrap-ds-test
+3. pip install -r requirements. txt
 
 
-> **Note**: Code must be develop using **Python** and shared in **github**.
+# About this project
 
-> **Note**: **jupyter** notebook should be used for exploratory data analysis (**EDA**).
+1. data/ : All the datasets and the versions they have had, before and after the EDA, as some decisions made during the EDA altered the initial dataset. 
+2. experiments/ : All artifacts generated during the experimentation phase (53 trainings) 
+3. notebooks/: 
+    - 1.Preprocess_dataset.ipynb: It includes all the code executed to generate the train and test sets.
+    - 2.EDA.ipynb : It includes all the code used for the exploratory data analysis and the decisions made during the process.
+    - 3.Experiments.ipynb: Includes all the code related to the experimentation phase.
+4. notebooks/mlruns: All information about the best model from the experiments is saved in MLflow.
 
----
+To view the MLflow UI, follow these steps:
+- Navigate to the notebooks directory:
 
-In this challenge you will have to **run 2 machine learning** models that solve a problem you'll define from ONE of the provided data sets you will choose and then compare the results.
+- cd notebooks/
 
-Keep in mind that the main goal of this challenge is not to get good performance on the models, but rather to validate the process you follow to solve the problem.
+- Start the MLflow server: mlflow server --host 127.0.0.1 --port 8080
 
-#### Tasks you'll need to perfom:
-1. From ONE of the provided data sets below, you must define a problem to solve with supervised learning, specify the target variable and the metric to be used.
-2. Perform an exploratory data analysis (EDA) on the data. During the analysis, make decisions about how the data will be processed, identifying transformations to be carried out during the preparation of the data.
-3. Develop the code to execute the preparation of the data and then execute the models.
-4. Evaluate the models and stablish a comparison between them.
-5. Identify problems that the models have and mention how they could be solved to improve the result.
+- Open your browser and go to: http://127.0.0.1:8080
 
-#### Output expected:
-Github repo including:
-1. Readme with decisions made
-2. Code developed to resolve challenge
-3. Include jupyter notebook inside the repo
-
-#### Possible Datasets to be used for the challenge, you should choose ONLY 1:
-- [Cars Dataset](https://data.world/dataman-udit/cars-data)
-- [US International Air Traffic Dataset](https://www.kaggle.com/datasets/parulpandey/us-international-air-traffic-data)
-- [World Happiness Dataset](https://www.kaggle.com/datasets/unsdsn/world-happiness)
-- [The Boston Housing Dataset](https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html)
-- [Wine Quality Dataset](https://archive.ics.uci.edu/ml/datasets/wine+quality)
+Note: Ensure MLflow is installed beforehand (pip install mlflow).
 
 
 
-Steps to show experiments on MLFLO
 
-
-1. cd notebooks
-
-2. mlflow server --host 127.0.0.1 --port 8080

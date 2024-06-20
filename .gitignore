@@ -132,6 +132,7 @@ venv.bak/
 
 *.DS_Store/
 
+.DS_Store
 .DS_Store/
 # Spyder project settings
 .spyderproject
