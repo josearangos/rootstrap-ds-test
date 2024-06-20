@@ -1,6 +1,5 @@
 # Rootstrap-ds-test
 
-# Github solution => https://github.com/josearangos/rootstrap-ds-test/tree/main
 
 [github](https://github.com/josearangos/rootstrap-ds-test/tree/main)
 
