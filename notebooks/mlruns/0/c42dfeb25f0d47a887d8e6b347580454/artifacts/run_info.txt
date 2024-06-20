@@ -1,0 +1,1 @@
+run first experiment using default params and automl Perform mode, AutoML steps: ['simple_algorithms', 'default_algorithms', 'not_so_random', 'hill_climbing_1', 'hill_climbing_2']
